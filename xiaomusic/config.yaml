@@ -1,0 +1,26 @@
+name: "XiaoMusic"
+version: "v0.3.77"
+slug: "xiaomusic"
+panel_icon: "mdi:music-box"
+description: "Xiaomusic for Home Assistant Addons"
+url: https://github.com/hanxi/xiaomusic
+image: hanxi/xiaomusic:"{{ version }}"
+init: false
+arch:
+  - amd64
+  - aarch64
+startup: "services"
+boot: "manual"
+apparmor: false
+webui: "[PROTO:http]://[HOST]:[PORT:8090]/"
+ports:
+  8090/tcp: "{{ port_mapping | default(8090) }}"
+options:
+  music_dir: ""
+  port_mapping: ""
+schema:
+  music_dir: "str?"
+  port_mapping: "str?"
+map:
+  - "{{ music_dir | default(/media/music) }}":/app/music:rw
+  - /conf:/app/conf:rw
