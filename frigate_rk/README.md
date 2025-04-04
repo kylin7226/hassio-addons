@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate Hailo
+# Home Assistant Add-on: Frigate Rockchip
 
 Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
 
