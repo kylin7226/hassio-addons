@@ -1,5 +1,3 @@
-# 冬瓜甄选Addons：XiaoMusic
-
 ## 关于
 
 使用小爱音箱播放音乐，音乐使用 yt-dlp 下载。
