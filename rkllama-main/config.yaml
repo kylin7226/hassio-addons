@@ -1,0 +1,20 @@
+name: rkllama main
+version: "1.0.0"
+description: "LLaMA model optimized for Rockchip devices, providing AI capabilities in Home Assistant"
+url: "https://github.com/NotPunchnox/rkllama"
+image: ghcr.io/notpunchnox/rkllama:main
+arch:
+  - arm64
+
+slug: rkllama-main
+init: false
+startup: system
+host_network: true
+homeassistant_api: true
+full_access: true
+video: true
+audio: true
+ingress: true
+ingress_port: 8080
+panel_icon: mdi:sheep
+map: ["config:rw", "media", "ssl"]
