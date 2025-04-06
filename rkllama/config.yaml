@@ -1,0 +1,13 @@
+name: "RKLLaMA"
+version: "1.0.0"
+slug: "rkllama"
+description: "RK LLaMA AI Assistant"
+url: "https://github.com/notpunchnox/rkllama"
+arch:
+  - aarch64
+image: "ghcr.io/notpunchnox/rkllama:main"
+startup: application
+boot: auto
+ports:
+  8080/tcp: 8080
+privileged: true
