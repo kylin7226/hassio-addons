@@ -5,7 +5,7 @@ panel_icon: "mdi:music-box"
 description: "Xiaomusic for Home Assistant Addons"
 url: https://github.com/hanxi/xiaomusic
 image: hanxi/xiaomusic:"{{ version }}"
-init: true
+init: false
 arch:
   - amd64
   - aarch64
