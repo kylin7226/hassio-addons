@@ -1,21 +1,28 @@
 # https://github.com/AlexxIT/builder/blob/master/builder.sh
-name: go2rtc master rk
+name: go2rtc master rockchip
 description: Hardware transcoding for rockchip
 url: https://github.com/AlexxIT/go2rtc
 image: alexxit/go2rtc
-arch: [ arm64 ]
+arch:
+  - aarch64
 
 # https://developers.home-assistant.io/docs/add-ons/configuration
 version: master-rockchip
-slug: go2rtc-master-rk
+slug: go2rtc-master-rockchip
 init: false
 startup: system
 host_network: true
 homeassistant_api: true
-full_access: true
+full_access: false
+privileged:
+  - PERFMON
+  - SYS_ADMIN
 video: true
 audio: true
 ingress: true
 ingress_port: 1984
 panel_icon: mdi:camera-wireless
-map: [ "config:rw", "media", "ssl" ]
+map:
+  - "media:rw"
+  - "config:rw"
+  - "ssl:ro"

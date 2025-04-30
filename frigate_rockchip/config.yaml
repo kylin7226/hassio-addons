@@ -1,7 +1,5 @@
 name: Frigate Rockchip
-version: 0.15.0-rk
-breaking_versions:
-  - 0.15.0-rk
+version: 0.15.1-rk
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-rockchip
@@ -22,11 +20,11 @@ hassio_api: true
 ports:
   8555/tcp: 8555
   8555/udp: 8555
-  8554/tcp: null
-  8971/tcp: null
-  5000/tcp: null
-  1984/tcp: null
-  1935/tcp: null
+  8554/tcp: false
+  8971/tcp: false
+  5000/tcp: false
+  1984/tcp: false
+  1935/tcp: false
 ports_description:
   8555/tcp: WebRTC over tcp
   8555/udp: WebRTC over udp
@@ -41,6 +39,7 @@ tmpfs: true
 full_access: false
 privileged:
   - PERFMON
+  - SYS_ADMIN
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
@@ -48,8 +47,8 @@ schema:
 services:
   - "mqtt:want"
 arch:
-  - amd64
   - aarch64
 map:
   - "media:rw"
   - "config:rw"
+  - "ssl:ro"
