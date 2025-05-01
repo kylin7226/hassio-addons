@@ -13,7 +13,7 @@ init: false
 startup: system
 host_network: true
 homeassistant_api: true
-full_access: false
+full_access: true
 privileged:
   - SYS_ADMIN
   - NET_ADMIN
