@@ -13,10 +13,7 @@ init: false
 startup: system
 host_network: true
 homeassistant_api: true
-full_access: false
-privileged:
-  - PERFMON
-  - SYS_ADMIN
+full_access: true
 video: true
 audio: true
 ingress: true
