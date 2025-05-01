@@ -13,7 +13,11 @@ init: false
 startup: system
 host_network: true
 homeassistant_api: true
-full_access: true
+full_access: false
+privileged:
+  - SYS_ADMIN
+  - NET_ADMIN
+  - SYS_RAWIO
 video: true
 audio: true
 ingress: true
